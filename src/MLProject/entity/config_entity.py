@@ -15,6 +15,13 @@ class DataValidationConfig:
  unzip_data_dir: Path
  all_schema: dict
 
+ 
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    data_path: Path
+    
+
 @dataclass(frozen=True)
 class ModelTrainerConfig:
     root_dir: Path
